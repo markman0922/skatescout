@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+    <div class="row">
+        <h1 style="text-align: center;">Create a New Skate Spot</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            
+            <form action="/spots" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input class="form-control" type="text" name="location" id="location-form" placeholder="Enter location here">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-default btn-block">Submit!</button>
+                </div>
+            </form>
+             <a href="/spots">Go Back</a>
+        </div>
+    </div>
+<script>
+    function activatePlacesSearch(){
+        var input = document.getElementById("location-form");
+        var autocomplete = new google.maps.places.Autocomplete(input);
+    }
+</script>    
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX7iJIeveloSfEbm1wUZR-5_socolU4X0&libraries=places&callback=activatePlacesSearch"></script>
+    
+
+<% include ../partials/footer %>

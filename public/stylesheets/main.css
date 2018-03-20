@@ -1,0 +1,30 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.glyphicon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}

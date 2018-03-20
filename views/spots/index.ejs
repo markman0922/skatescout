@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+   
+   <header class="jumbotron">
+         <h1><span class="glyphicon glyphicon-road"> </span>Welcome to SkateScout!</h1>
+         <p>The best skate spots in your area!</p>
+         <p>
+            <a class="btn btn-primary btn-large" href="/spots/new">Add New Skate Spot</a>
+         </p>
+   </header>
+
+
+
+   <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+       <% spot.forEach(function(spot){ %>
+         <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+               <img src="<%= spot.image %>">
+               <div class="caption">
+                  <h4><%= spot.name %></h4>
+               </div>
+               <p>
+                  <a href="/spots/<%= spot._id %>" class="btn btn-primary">More Info</a>
+               </p>
+            </div>
+         </div>
+      <% }); %>
+      </div> 
+   
+
+<% include ../partials/footer %>

@@ -16,8 +16,8 @@ var commentRoutes = require("./routes/comments"),
     spotRoutes = require("./routes/spots"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/skatescout");
-// mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb://localhost/skatescout");
+mongoose.connect(process.env.DATABASEURL);
 
 
 app.use(bodyParser.urlencoded({extended: true}));

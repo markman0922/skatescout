@@ -17,8 +17,6 @@ var commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
 
 
-// mongoose.connect("mongodb://Mark:mm1994@ds117759.mlab.com:17759/skatescout");
-// mongoose.connect("mongodb://localhost/skatescout");
 mongoose.connect(process.env.DATABASEURL);
 
 

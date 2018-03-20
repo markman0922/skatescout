@@ -16,8 +16,10 @@ var commentRoutes = require("./routes/comments"),
     spotRoutes = require("./routes/spots"),
     indexRoutes = require("./routes/index");
 
+
+mongoose.connect("mongodb://Mark:mm1994@ds117759.mlab.com:17759/skatescout");
 // mongoose.connect("mongodb://localhost/skatescout");
-mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect(process.env.DATABASEURL);
 
 
 app.use(bodyParser.urlencoded({extended: true}));
